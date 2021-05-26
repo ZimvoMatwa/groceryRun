@@ -13,7 +13,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login("thehuman.zimvo@gmail.com", "hbzipuatxfqocdnf")
+    server.login("thehuman.zimvo@gmail.com", "banana")
 
     subject = "backed goods"
     body = "before you waste your money, here is the grocery list"
