@@ -16,47 +16,54 @@ def checkers():
     page = requests.get(cURL, headers=heading)
     pot = BeautifulSoup(page.content, "html.parser")
 
-    for ting in pot.findAll("a", {"class": "product-listening-click"}):
-        print(ting.get_text().strip())
+    for ting in pot.findAll("div", {"class": "item-product"}):
+        item = ting.find("a", class_="product-listening-click").get_text().strip()
+        item_name.append(item)
+        price = ting.find("span", class_="now").get_text().strip()
+        item_price.append(price)
+    # return item_price, item_name
 
 
-# def picknPay():
-pURL = "https://www.pnp.co.za/pnpstorefront/pnp/en/All-Products/Fresh-Food/Bakery/c/bakery703655157"
-page = requests.get(pURL, headers=heading)
-pot = BeautifulSoup(page.content, "html.parser")
+def picknPay():
+    pURL = "https://www.pnp.co.za/pnpstorefront/pnp/en/All-Products/Fresh-Food/Bakery/c/bakery703655157"
+    page = requests.get(pURL, headers=heading)
+    pot = BeautifulSoup(page.content, "html.parser")
 
-for ting in pot.findAll("div", {"class": "productCarouselItemContainer"}):
-    item = ting.find("div", class_="item-name").get_text().strip()
-    item_name.append(item)
-    price = ting.find("div", class_="currentPrice").get_text().strip()
-    item_price.append(price)
-
-
-# def woolworths():
-# wURL = "https://www.woolworths.co.za/cat/Food/Bread-Bakery-Desserts/_/N-1bm2new"
-# page = requests.get(wURL, headers=heading)
-# pot = BeautifulSoup(page.content, "html.parser")
-#
-# details = pot.findAll("div", {"class": "product-list__item"})
-# for cont in details:
-#     item = cont.find("a", class_="range--title").get_text().strip()
-#     item_name.append(item)
-#     price = cont.find("strong", class_="price").get_text().strip()
-#     item_price.append(price)
+    for ting in pot.findAll("div", {"class": "productCarouselItemContainer"}):
+        item = ting.find("div", class_="item-name").get_text().strip()
+        item_name.append(item)
+        price = ting.find("div", class_="currentPrice").get_text().strip()
+        item_price.append(price)
+    # return item_price, item_name
 
 
-# def shoprite():
-sURL = "https://www.shoprite.co.za/c-2614/All-Departments/Food/Bakery"
-page = requests.get(sURL, headers=heading)
-pot = BeautifulSoup(page.content, "html.parser")
+def woolworths():
+    wURL = "https://www.woolworths.co.za/cat/Food/Bread-Bakery-Desserts/_/N-1bm2new"
+    page = requests.get(wURL, headers=heading)
+    pot = BeautifulSoup(page.content, "html.parser")
 
-for ting in pot.findAll("div", {"class": "product-item"}):
-    dos = ting.find("a", class_="product-listening-click").get_text().strip()
-    item_name.append(dos)
-    uno = ting.find("span", class_="now").get_text().strip()
-    item_price.append(uno)
-# for ting in pot.findAll("a", {"class": "product-listening-click"}):
-#     print(ting.get_text.strip())
+    details = pot.findAll("div", {"class": "product-list__item"})
+    for cont in details:
+        item = cont.find("a", class_="range--title").get_text().strip()
+        item_name.append(item)
+        price = cont.find("strong", class_="price").get_text().strip()
+        item_price.append(price)
+        # return item_price, item_name
+
+
+def shoprite():
+    sURL = "https://www.shoprite.co.za/c-2614/All-Departments/Food/Bakery"
+    page = requests.get(sURL, headers=heading)
+    pot = BeautifulSoup(page.content, "html.parser")
+
+    for ting in pot.findAll("div", {"class": "product-item"}):
+        dos = ting.find("a", class_="product-listening-click").get_text().strip()
+        item_name.append(dos)
+        uno = ting.find("span", class_="now").get_text().strip()
+        item_price.append(uno)
+        # return item_price, item_name
+        # for ting in pot.findAll("a", {"class": "product-listening-click"}):
+        #     print(ting.get_text.strip())
 
 
 # pandas skelly
@@ -74,7 +81,7 @@ groceryList = pd.DataFrame({
 # picknPay()
 # woolworths()
 # shoprite()
-print(groceryList)
+# print(groceryList)
 # groceryList.to_csv("groceries.csv")
 
 # FUTURE FEATURES
