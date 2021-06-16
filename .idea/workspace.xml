@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90ae81b9-97f4-4275-9158-90df29be6516" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/poop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poop2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poop.py" beforeDir="false" afterPath="$PROJECT_DIR$/poop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sree.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/scrape.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/poop2.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/poop.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ass/watchlist.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1sxLcnujzCTgSgI6BiB3yXqpj3I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
