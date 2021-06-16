@@ -28,7 +28,7 @@ details = pot.findAll("div", {"class": "product-list__item"})
 # MAKING THE GROCERY LIST
 groceryList = []
 while True:
-    item = input("Enter name to add to grocery list \nEnter 'done' when you are done")
+    item = input("Enter item name to add to grocery list \nEnter 'done' when you are done")
     if item.lower() == "done":
         break
     else:
